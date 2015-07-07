@@ -20,7 +20,7 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
     var content_y =  CGFloat()
     
     override func viewWillAppear(animated: Bool) {
-        getTestInfo()
+        
     }
     
     override func viewDidLoad() {
@@ -33,6 +33,8 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
         //讨论按钮
         let rightItem = UIBarButtonItem(title: "讨论", style: UIBarButtonItemStyle.Plain, target: self, action: "actionOfDiscuss")
         self.navigationItem.rightBarButtonItem = rightItem
+        
+        getTestInfo()
         
         //
         layout = MyLayout()
@@ -47,6 +49,8 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
         mycollectionview!.backgroundColor = UIColor.clearColor()
         mycollectionview!.registerNib(cellNib, forCellWithReuseIdentifier: "MyCollectionViewCell")
         self.view.addSubview(mycollectionview!)
+        
+        
         
         //play
         print(NSInteger.max)
@@ -87,7 +91,7 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
     //讨论
     func actionOfDiscuss(){
         var web_vc = DiscussViewController()
-        web_vc.url = "http://www.cocoachina.com/bbs/read.php?tid=309669&page=1&toread=1#tpc"
+        web_vc.url = "http://www.cocoachina.com/bbs/read.php?tid=310092"
         self.navigationController!.pushViewController(web_vc, animated: true)
     }
 
