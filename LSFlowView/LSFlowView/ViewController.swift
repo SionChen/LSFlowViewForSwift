@@ -56,8 +56,8 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
     func getTestInfo(){
         
         //
-        //在取随机14张图片 1~18 包括1 不包括18
-        testImgArr = createGenerator(14)(1,18)
+        //在取随机14张图片 1~16 包括1 不包括16
+        testImgArr = createGenerator(13)(1,16)
 
         print(testImgArr)
 
